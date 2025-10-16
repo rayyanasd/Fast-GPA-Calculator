@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Inter';
+  src: url("Inter-VariableFont_opsz,wght.ttf") format('truetype');
+  font-weight: 50;
+  font-style: normal;
+}
+
+.inputText {
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.mainText {
+    opacity: 0;
+    animation: fadeIn 5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background-color: #000000;
+    background-image:
+    linear-gradient(to right, #2F3336 1px, transparent 1px),
+    linear-gradient(to bottom, #2F3336 1px, transparent 1px);
+    background-size: 50px 50px;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 70vh;
+    margin: 0;
+    border-radius: 10px;
+    border-color: #2F3336;
+    border-style: solid;
+    border-width: 1px;
+    background: rgba(255, 255, 255, 0);
+    color: aliceblue;
+    transition: box-shadow 1s ease;
+    gap: 20px;
+    backdrop-filter: blur(3px);
+}
+
+.proceedbtn {
+    font-weight: bold;
+    font-family: "Inter";
+    font-size: 15px;
+    background-color: black;
+    border-radius: 30px;
+    border-style: none;
+    height: 40px;
+    width: 120px;
+    box-shadow: 1px 2px 3px rgba(19, 112, 234, 0.5)46;
+    animation: revolve 2s linear infinite;
+    color: white;
+    margin-top: 20px;
+}
+
+.nextbtn {
+    font-weight: bold;
+    font-family: "Inter";
+    font-size: 15px;
+    background-color: black;
+    border-radius: 30px;
+    border-style: none;
+    height: 40px;
+    width: 120px;
+    box-shadow: 1px 2px 3px rgba(19, 112, 234, 0.5)46;
+    animation: revolve 2s linear infinite;
+    color: white;
+    margin: 0px;
+}
+
+.proceedbtn:hover {
+    cursor: pointer;
+}
+
+.mainInput {
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: #000000;
+    border-style: solid;
+    border-color: #2F3336;
+    color: white;
+    padding-left: 10px;
+}
+
+.mainInput::placeholder{
+    font-size: 14px;
+}
+
+
+
+@keyframes revolve {
+
+    0%   { box-shadow: 5px 5px 15px rgba(19, 112, 234, 0.5); }
+    25%  { box-shadow: -5px 5px 15px rgba(19, 112, 234, 0.5); }
+    50%  { box-shadow: -5px -5px 15px rgba(19, 112, 234, 0.5); }
+    75%  { box-shadow: 5px -5px 15px rgba(19, 112, 234, 0.5); }
+    100% { box-shadow: 5px 5px 15px rgba(19, 112, 234, 0.5); }
+}
+
+.content:hover {
+    box-shadow: 0 20px 40px rgba(19, 112, 234, 0.2);
+}
